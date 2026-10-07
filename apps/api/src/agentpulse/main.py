@@ -116,6 +116,12 @@ def create_app() -> FastAPI:
             checks=checks,
         )
 
+    from agentpulse.ingest.router import router as ingest_router
+    from agentpulse.query.router import router as query_router
+
+    app.include_router(ingest_router)
+    app.include_router(query_router)
+
     return app
 
 

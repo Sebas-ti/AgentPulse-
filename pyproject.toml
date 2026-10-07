@@ -41,7 +41,7 @@ select = [
     "B",   # flake8-bugbear
     "UP",  # pyupgrade
 ]
-ignore = []
+ignore = ["B008"]
 
 [tool.pyright]
 pythonVersion = "3.12"
